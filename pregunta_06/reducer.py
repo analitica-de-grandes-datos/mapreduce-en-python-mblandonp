@@ -12,7 +12,6 @@ if __name__ == '__main__':
 
     curkey = None
     v_max  = 0
-    #v_min  = 0
 
     #
     # cada linea de texto recibida es una entrada clave \tabulador valor
