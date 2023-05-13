@@ -7,15 +7,15 @@ if __name__ == '__main__':
  
     for line in sys.stdin: 
  
-        key, val = line.split("\t") 
-        val = val.strip() 
+        key, valor = line.split("\t") 
+        valor = valor.strip() 
  
         if key == curkey: 
             # 
             # No se ha cambiado de clave. Aca se acumulan los valores para la misma 
             # clave. 
             # 
-            numeros = numeros + ',' + str(int(val)) 
+            numeros = numeros + ',' + str(int(valor)) 
         else: 
             # 
             # Se cambio de clave. Se reinicia el acumulador. 
@@ -25,6 +25,6 @@ if __name__ == '__main__':
                 sys.stdout.write("{}\t{}\n".format(curkey, numeros)) 
  
             curkey = key 
-            numeros = str(int(val)) 
+            numeros = str(int(valor)) 
  
     sys.stdout.write("{}\t{}\n".format(curkey, numeros))
